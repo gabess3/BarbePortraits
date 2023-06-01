@@ -9,7 +9,12 @@ function Bio() {
 				href='https://www.instagram.com/laurabarbeportraits/?hl=en'
 				target='_blank'
 			>
-				<img src='/images/Profile.png' width={300} height={450} />
+				<img
+					src='/images/Profile.png'
+					width={300}
+					height={450}
+					alt='Laura Barbé'
+				/>
 			</a>
 
 			<Box className='bio-info-container'>

@@ -30,6 +30,7 @@ function Header() {
 				width={'70%'}
 				height={'90%'}
 				style={{ align: 'center', maxWidth: 650 }}
+				alt='divider'
 			/>
 			<Box paddingBottom={20} />
 		</Box>

@@ -66,9 +66,9 @@ function Work() {
 						margin={2}
 					>
 						To learn more about pet portrait options, and terms of agreement,
-						check out the commission contract{' '}
+						check out the{' '}
 						<a href={contract} target='_blank'>
-							here
+							commission contract
 						</a>
 						.
 					</Typography>
