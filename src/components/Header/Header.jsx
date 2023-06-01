@@ -9,10 +9,10 @@ function Header() {
         align="center"
         fontFamily={"Italiana"}
         sx={{
-          paddingTop: 20,
+          paddingTop: 15,
           fontSize: "700%",
         }}
-        id='barbe'
+        id="barbe"
       >
         Barbé
       </Typography>

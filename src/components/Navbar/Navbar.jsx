@@ -50,7 +50,10 @@ function Navbar() {
     <Box sx={{ flexGrow: 1, bgcolor: "#202020" }}>
       <Box
         sx={{
-          display: { xs: "block", sm: "none" },
+          display: { xs: "flex", sm: "none" },
+          justifyContent: "left",
+          alignItems: "center",
+          p: 5,
         }}
       >
         <IconButton
@@ -60,7 +63,7 @@ function Navbar() {
           aria-haspopup="true"
           onClick={handleOpenNavMenu}
         >
-          <MenuIcon sx={{ color: "white"}} />
+          <MenuIcon sx={{ color: "white" }} />
         </IconButton>
         <Menu
           id="menu-appbar"
@@ -79,10 +82,7 @@ function Navbar() {
         >
           {tabs.map((tab) => (
             <MenuItem>
-              <Button
-                key={tab.name}
-                href={tab.link}
-              >
+              <Button key={tab.name} href={tab.link}>
                 <Typography color={"black"} fontSize={15} fontFamily={"serif"}>
                   {tab.name}
                 </Typography>
@@ -91,32 +91,31 @@ function Navbar() {
           ))}
         </Menu>
       </Box>
-      <AppBar position="static" color="transparent" sx={{ p: 3 }}>
-        <Toolbar>
-          <Box
-            className="navbar-container"
-            sx={{ display: { xs: "none", sm: "flex" } }}
-          >
-            {tabs.map((tab) => (
-              <Button
-                key={tab.name}
-                href={tab.link}
-                sx={{
-                  transition: "all .3s ease-in-out",
-                  "&:hover": {
-                    bgcolor: "#202020",
-                    borderRadius: 3,
-                    transform: "scale(1.2)",
-                  },
-                }}
-              >
-                <Typography color={"white"} fontSize={15} fontFamily={"serif"}>
-                  {tab.name}
-                </Typography>
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
+      <AppBar
+        position="static"
+        color="transparent"
+        sx={{ display: { xs: "none", sm: "flex" }, p: 5 }}
+      >
+        <Box className="navbar-container">
+          {tabs.map((tab) => (
+            <Button
+              key={tab.name}
+              href={tab.link}
+              sx={{
+                transition: "all .3s ease-in-out",
+                "&:hover": {
+                  bgcolor: "#202020",
+                  borderRadius: 3,
+                  transform: "scale(1.2)",
+                },
+              }}
+            >
+              <Typography color={"white"} fontSize={15} fontFamily={"serif"}>
+                {tab.name}
+              </Typography>
+            </Button>
+          ))}
+        </Box>
       </AppBar>
     </Box>
   );
