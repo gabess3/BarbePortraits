@@ -92,7 +92,7 @@ export default function PaintingCard() {
 									padding: 2,
 								}}
 							>
-								Click here to see more!
+								More Info
 							</Button>
 							<Modal
 								open={open}

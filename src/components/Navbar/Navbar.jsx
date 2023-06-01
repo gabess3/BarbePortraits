@@ -80,7 +80,7 @@ function Navbar() {
 					onClose={handleCloseNavMenu}
 				>
 					{tabs.map((tab) => (
-						<MenuItem>
+						<MenuItem key={tab.name} onClick={handleCloseNavMenu}>
 							<Button key={tab.name} href={tab.link}>
 								<Typography color={'black'} fontSize={15} fontFamily={'serif'}>
 									{tab.name}
