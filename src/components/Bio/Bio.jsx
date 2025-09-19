@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import React from 'react';
+import { attributes } from '../../attributes';
 import '../../App.css';
 
 function Bio() {
@@ -18,24 +18,8 @@ function Bio() {
 			</a>
 
 			<Box className='bio-info-container'>
-				<Typography
-					variant='h4'
-					fontFamily={'Italiana'}
-					fontWeight={400}
-					paddingBottom={5}
-					paddingTop={7}
-					fontSize={'400%'}
-					align='center'
-				>
-					About the Artist
-				</Typography>
-				<Typography
-					variant='body1'
-					width={'75%'}
-					fontFamily={'Palatino'}
-					align='justify'
-					paddingBottom={5}
-				>
+				<Typography {...attributes.bioHeader}>About the Artist</Typography>
+				<Typography {...attributes.bioInfo}>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
 					ratione perferendis delectus maiores voluptatum modi natus voluptas
 					recusandae cupiditate hic tenetur cumque laudantium nulla, at iure

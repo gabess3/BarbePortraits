@@ -10,6 +10,8 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import '../../App.css';
+import { attributes } from '../../attributes';
+import { styles } from '../../styles';
 
 const tabs = [
 	{
@@ -47,17 +49,9 @@ function Navbar() {
 
 	return (
 		<Box sx={{ flexGrow: 1, bgcolor: '#202020' }}>
-			<Box
-				sx={{
-					display: { xs: 'flex', sm: 'none' },
-					justifyContent: 'left',
-					alignItems: 'center',
-					p: 5,
-				}}
-			>
+			<Box sx={styles.navBarBox}>
 				<IconButton
 					size='large'
-					aria-label='account of current user'
 					aria-controls='menu-appbar'
 					aria-haspopup='true'
 					onClick={handleOpenNavMenu}
@@ -65,17 +59,9 @@ function Navbar() {
 					<MenuIcon sx={{ color: 'white' }} />
 				</IconButton>
 				<Menu
-					id='menu-appbar'
+					{...attributes.medNavbar}
 					anchorEl={anchorElNav}
-					anchorOrigin={{
-						vertical: 'bottom',
-						horizontal: 'left',
-					}}
 					keepMounted
-					transformOrigin={{
-						vertical: 'top',
-						horizontal: 'left',
-					}}
 					open={Boolean(anchorElNav)}
 					onClose={handleCloseNavMenu}
 				>
@@ -97,18 +83,7 @@ function Navbar() {
 			>
 				<Box className='navbar-container'>
 					{tabs.map((tab) => (
-						<Button
-							key={tab.name}
-							href={tab.link}
-							sx={{
-								transition: 'all .3s ease-in-out',
-								'&:hover': {
-									bgcolor: '#202020',
-									borderRadius: 3,
-									transform: 'scale(1.2)',
-								},
-							}}
-						>
+						<Button key={tab.name} href={tab.link} sx={styles.navBarTabs}>
 							<Typography color={'white'} fontSize={15} fontFamily={'serif'}>
 								{tab.name}
 							</Typography>

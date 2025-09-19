@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
@@ -13,6 +12,8 @@ import {
 	Paper,
 } from '@mui/material';
 import '../../App.css';
+import { attributes } from '../../attributes';
+import { styles } from '../../styles';
 
 const canvasSizes = [
 	'../images/8x10.jpg',
@@ -21,11 +22,23 @@ const canvasSizes = [
 	'../images/12x16.jpg',
 ];
 
-const canvasMaterials = [
-	'../images/canvasboard.jpg',
-	'../images/canvaspaper.jpg',
-	'../images/closeupcanvaspaper.jpg',
-	'../images/stretchedcanvas.jpg',
+const canvasObjects = [
+	{
+		name: 'Canvas Board',
+		image: '../images/canvasboard.jpg',
+	},
+	{
+		name: 'Canvas Paper',
+		image: '../images/canvaspaper.jpg',
+	},
+	{
+		name: 'Close Up Canvas Paper',
+		image: '../images/closeupcanvaspaper.jpg',
+	},
+	{
+		name: 'Stretched Canvas',
+		image: '../images/stretchedcanvas.jpg',
+	},
 ];
 
 function createData(name, price1, price2, price3, price4) {
@@ -41,15 +54,7 @@ const rows = [
 export default function Canvas() {
 	return (
 		<Box width={'100%'} sx={{ bgcolor: '#c6c6c6' }}>
-			<Typography
-				fontSize={'400%'}
-				fontFamily={'Italiana'}
-				fontWeight={400}
-				letterSpacing={3}
-				align='center'
-				p={5}
-				id='Canvas'
-			>
+			<Typography {...attributes.canvasHeader}>
 				Canvas Sizes and Materials
 			</Typography>
 			<Box sx={{ p: 5, display: 'flex', justifyContent: 'center' }}>
@@ -109,14 +114,7 @@ export default function Canvas() {
 			<Typography align='center' variant='subtitle2' marginBottom={5}>
 				*See hand size in photos for reference*
 			</Typography>
-			<Box
-				sx={{
-					display: 'flex',
-					flexWrap: 'wrap',
-					justifyContent: 'space-around',
-					paddingBottom: 20,
-				}}
-			>
+			<Box sx={styles.canvasSizes}>
 				{canvasSizes.map((canvas) => (
 					<Tooltip
 						key={canvas}
@@ -127,20 +125,7 @@ export default function Canvas() {
 						arrow
 						followCursor
 					>
-						<Card
-							key={canvas}
-							sx={{
-								width: 300,
-								borderRadius: 2,
-								boxShadow: '0px 8px 13px black',
-								transition: 'all .3s ease-in-out',
-								'&:hover': {
-									boxShadow: '0px 10px 15px black',
-									transform: 'scale(1.1)',
-								},
-								m: 2.3,
-							}}
-						>
+						<Card key={canvas} sx={styles.canvasCard}>
 							<CardActionArea>
 								<CardMedia
 									component='img'
@@ -153,54 +138,17 @@ export default function Canvas() {
 					</Tooltip>
 				))}
 			</Box>
-			<Typography
-				fontSize={'300%'}
-				align='center'
-				paddingY={5}
-				fontFamily={'Italiana'}
-				bgcolor={'#c6c6c6'}
-				color={'black'}
-			>
-				Materials
-			</Typography>
-			<Box
-				sx={{
-					display: 'flex',
-					flexWrap: 'wrap',
-					justifyContent: 'space-around',
-					paddingBottom: 20,
-					bgcolor: '#c6c6c6',
-				}}
-			>
-				{canvasMaterials.map((canvas) => (
-					<Tooltip
-						title={canvas.substring(
-							canvas.lastIndexOf('/') + 1,
-							canvas.lastIndexOf('.')
-						)}
-						arrow
-						followCursor
-					>
-						<Card
-							key={canvas}
-							sx={{
-								width: 300,
-								borderRadius: 2,
-								boxShadow: '0px 8px 13px black',
-								transition: 'all .3s ease-in-out',
-								'&:hover': {
-									boxShadow: '0px 10px 15px black',
-									transform: 'scale(1.1)',
-								},
-								m: 2.3,
-							}}
-						>
+			<Typography {...attributes.materialsHeader}>Materials</Typography>
+			<Box sx={styles.materialsHeader}>
+				{canvasObjects.map((canvas) => (
+					<Tooltip title={canvas.name} arrow followCursor>
+						<Card key={canvas.name} sx={styles.materialsCard}>
 							<CardActionArea>
 								<CardMedia
 									component='img'
 									height='220'
-									image={canvas}
-									alt={canvas}
+									image={canvas.image}
+									alt={canvas.image}
 								/>
 							</CardActionArea>
 						</Card>

@@ -1,37 +1,21 @@
-import React from 'react';
 import { Typography, Box } from '@mui/material';
 import '../../App.css';
+import { attributes } from '../../attributes';
 
 function Header() {
 	return (
 		<Box className='header-container'>
 			<Typography
-				align='center'
-				fontFamily={'Italiana'}
+				{...attributes.titleHeader}
 				sx={{
 					paddingTop: 15,
 					fontSize: '700%',
 				}}
-				id='barbe'
 			>
 				Barbé
 			</Typography>
-			<Typography
-				variant='subtitle'
-				fontFamily={'cursive'}
-				align='center'
-				fontSize={'200%'}
-				paddingBottom={2}
-			>
-				Portraits
-			</Typography>
-			<img
-				src='/images/divider.png'
-				width={'70%'}
-				height={'90%'}
-				style={{ align: 'center', maxWidth: 650 }}
-				alt='divider'
-			/>
+			<Typography {...attributes.titleSubheader}>Portraits</Typography>
+			<img {...attributes.divider} style={{ align: 'center', maxWidth: 650 }} />
 			<Box paddingBottom={20} />
 		</Box>
 	);

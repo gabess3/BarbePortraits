@@ -1,0 +1,105 @@
+export const styles = {
+	canvasSizes: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		justifyContent: 'space-around',
+		paddingBottom: 20,
+	},
+	canvasCard: {
+		width: 300,
+		borderRadius: 2,
+		boxShadow: '0px 8px 13px black',
+		transition: 'all .3s ease-in-out',
+		'&:hover': {
+			boxShadow: '0px 10px 15px black',
+			transform: 'scale(1.1)',
+		},
+		m: 2.3,
+	},
+	materialsHeader: {
+		display: 'flex',
+		flexWrap: 'wrap',
+		justifyContent: 'space-around',
+		paddingBottom: 20,
+		bgcolor: '#c6c6c6',
+	},
+	materialsCard: {
+		width: 300,
+		borderRadius: 2,
+		boxShadow: '0px 8px 13px black',
+		transition: 'all .3s ease-in-out',
+		'&:hover': {
+			boxShadow: '0px 10px 15px black',
+			transform: 'scale(1.1)',
+		},
+		m: 2.3,
+	},
+	footerBox: {
+		display: 'flex',
+		justifyContent: 'center',
+		bgcolor: '#202020',
+		paddingY: 4,
+	},
+	icon: {
+		fontSize: 30,
+		px: 3,
+		boxSizing: 'revert',
+		color: 'white',
+		transition: 'all .3s ease-in-out',
+		'&:hover': {
+			transform: 'scale(1.5)',
+		},
+	},
+	copyright: {
+		display: 'flex',
+		justifyContent: 'center',
+		bgcolor: '#202020',
+		paddingBottom: 5,
+	},
+	petCard: {
+		width: 320,
+		borderRadius: 2,
+		boxShadow: '0px 8px 13px black',
+		transition: 'all .3s ease-in-out',
+		'&:hover': {
+			boxShadow: '0px 10px 15px black',
+			transform: 'scale(1.1)',
+		},
+		m: 2.3,
+	},
+	petCardAction: {
+		display: 'flex',
+		justifyContent: 'center',
+		backgroundColor: '#353935',
+	},
+	petCardButton: {
+		color: 'whitesmoke',
+		fontWeight: 'bold',
+		padding: 2,
+	},
+	modalBox: {
+		position: 'absolute',
+		top: '50%',
+		left: '50%',
+		transform: 'translate(-50%, -50%)',
+		width: 400,
+		bgcolor: 'background.paper',
+		border: '2px solid #000',
+		boxShadow: 24,
+		p: 4,
+	},
+	navBarBox: {
+		display: { xs: 'flex', sm: 'none' },
+		justifyContent: 'left',
+		alignItems: 'center',
+		p: 5,
+	},
+	navBarTabs: {
+		transition: 'all .3s ease-in-out',
+		'&:hover': {
+			bgcolor: '#202020',
+			borderRadius: 3,
+			transform: 'scale(1.1)',
+		},
+	},
+};
