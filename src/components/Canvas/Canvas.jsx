@@ -14,13 +14,12 @@ import {
 import '../../App.css';
 import { attributes } from '../../attributes';
 import { styles } from '../../styles';
+import size1 from '../../assets/8x10.jpg';
+import size2 from '../../assets/9x12.jpg';
+import size3 from '../../assets/11x14.jpg';
+import size4 from '../../assets/12x16.jpg';
 
-const canvasSizes = [
-	'src/assets/8x10.jpg',
-	'src/assets/9x12.jpg',
-	'src/assets/11x14.jpg',
-	'src/assets/12x16.jpg',
-];
+const canvasSizes = [size1, size2, size3, size4];
 
 const canvasObjects = [
 	{

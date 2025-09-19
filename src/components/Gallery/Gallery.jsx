@@ -13,15 +13,14 @@ import {
 import '../../App.css';
 import { attributes } from '../../attributes';
 import { styles } from '../../styles';
+import pet1 from '../../assets/pet1.jpeg';
+import pet2 from '../../assets/pet2.jpeg';
+import pet3 from '../../assets/pet3.jpeg';
+import pet4 from '../../assets/pet4.jpeg';
+import pet5 from '../../assets/pet5.jpeg';
+import pet6 from '../../assets/pet6.png';
 
-const pets = [
-	'/src/assets/pet1.jpeg',
-	'/src/assets/pet2.jpeg',
-	'/src/assets/pet3.jpeg',
-	'/src/assets/pet4.jpeg',
-	'/src/assets/pet5.jpeg',
-	'/src/assets/pet6.png',
-];
+const pets = [pet1, pet2, pet3, pet4, pet5, pet6];
 
 export default function PaintingCard() {
 	const [open, setOpen] = React.useState(false);

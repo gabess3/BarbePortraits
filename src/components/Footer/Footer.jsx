@@ -9,7 +9,7 @@ function Footer() {
 		<>
 			<Box id='Contact' sx={styles.footerBox}>
 				<a href='mailto:laubarbe727@gmail.com' style={{ color: 'black' }}>
-					<MailIcon sx={{ ...styles.icon }} />
+					<MailIcon sx={styles.icon} />
 				</a>
 				<a
 					href='https://www.linkedin.com/in/laura-barbe/'
