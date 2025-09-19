@@ -15,12 +15,12 @@ import { attributes } from '../../attributes';
 import { styles } from '../../styles';
 
 const pets = [
-	'/images/pet1.jpeg',
-	'/images/pet2.jpeg',
-	'/images/pet3.jpeg',
-	'/images/pet4.jpeg',
-	'/images/pet5.jpeg',
-	'/images/pet6.png',
+	'/src/assets/pet1.jpeg',
+	'/src/assets/pet2.jpeg',
+	'/src/assets/pet3.jpeg',
+	'/src/assets/pet4.jpeg',
+	'/src/assets/pet5.jpeg',
+	'/src/assets/pet6.png',
 ];
 
 export default function PaintingCard() {

@@ -63,7 +63,7 @@ export const attributes = {
 		paddingBottom: 2,
 	},
 	divider: {
-		src: '/images/divider.png',
+		src: '/src/assets/divider.png',
 		width: '70%',
 		height: '90%',
 		alt: 'divider',

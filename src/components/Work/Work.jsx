@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import Canvas from '../Canvas/Canvas';
-import contract from '/images/commissioncontract.pdf';
+import contract from '../../assets/commissioncontract.pdf';
 import '../../App.css';
 import { attributes } from '../../attributes';
 

@@ -16,28 +16,28 @@ import { attributes } from '../../attributes';
 import { styles } from '../../styles';
 
 const canvasSizes = [
-	'../images/8x10.jpg',
-	'../images/9x12.jpg',
-	'../images/11x14.jpg',
-	'../images/12x16.jpg',
+	'src/assets/8x10.jpg',
+	'src/assets/9x12.jpg',
+	'src/assets/11x14.jpg',
+	'src/assets/12x16.jpg',
 ];
 
 const canvasObjects = [
 	{
 		name: 'Canvas Board',
-		image: '../images/canvasboard.jpg',
+		image: 'src/assets/canvasboard.jpg',
 	},
 	{
 		name: 'Canvas Paper',
-		image: '../images/canvaspaper.jpg',
+		image: 'src/assets/canvaspaper.jpg',
 	},
 	{
 		name: 'Close Up Canvas Paper',
-		image: '../images/closeupcanvaspaper.jpg',
+		image: 'src/assets/closeupcanvaspaper.jpg',
 	},
 	{
 		name: 'Stretched Canvas',
-		image: '../images/stretchedcanvas.jpg',
+		image: 'src/assets/stretchedcanvas.jpg',
 	},
 ];
 

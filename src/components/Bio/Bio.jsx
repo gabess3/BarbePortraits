@@ -10,7 +10,7 @@ function Bio() {
 				target='_blank'
 			>
 				<img
-					src='/images/Profile.png'
+					src='/src/assets/Profile.png'
 					width={300}
 					height={450}
 					alt='Laura Barbé'
