@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { attributes } from '../../attributes';
 import '../../App.css';
+import profileImg from '../../assets/Profile.png';
 
 function Bio() {
 	return (
@@ -9,12 +10,7 @@ function Bio() {
 				href='https://www.instagram.com/laurabarbeportraits/?hl=en'
 				target='_blank'
 			>
-				<img
-					src='/src/assets/Profile.png'
-					width={300}
-					height={450}
-					alt='Laura Barbé'
-				/>
+				<img src={profileImg} width={300} height={450} alt='Laura Barbé' />
 			</a>
 
 			<Box className='bio-info-container'>
