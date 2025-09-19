@@ -14,29 +14,35 @@ import {
 import '../../App.css';
 import { attributes } from '../../attributes';
 import { styles } from '../../styles';
+
 import size1 from '../../assets/8x10.jpg';
 import size2 from '../../assets/9x12.jpg';
 import size3 from '../../assets/11x14.jpg';
 import size4 from '../../assets/12x16.jpg';
+
+import canvasBoard from '../../assets/canvasboard.jpg';
+import canvasPaper from '../../assets/canvaspaper.jpg';
+import closeUpCanvasPaper from '../../assets/closeupcanvaspaper.jpg';
+import stretchedCanvas from '../../assets/stretchedcanvas.jpg';
 
 const canvasSizes = [size1, size2, size3, size4];
 
 const canvasObjects = [
 	{
 		name: 'Canvas Board',
-		image: 'src/assets/canvasboard.jpg',
+		image: canvasBoard,
 	},
 	{
 		name: 'Canvas Paper',
-		image: 'src/assets/canvaspaper.jpg',
+		image: canvasPaper,
 	},
 	{
 		name: 'Close Up Canvas Paper',
-		image: 'src/assets/closeupcanvaspaper.jpg',
+		image: closeUpCanvasPaper,
 	},
 	{
 		name: 'Stretched Canvas',
-		image: 'src/assets/stretchedcanvas.jpg',
+		image: stretchedCanvas,
 	},
 ];
 

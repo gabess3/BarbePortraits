@@ -1,3 +1,5 @@
+import divider from '../src/assets/divider.png';
+
 export const attributes = {
 	bioHeader: {
 		variant: 'h4',
@@ -63,7 +65,7 @@ export const attributes = {
 		paddingBottom: 2,
 	},
 	divider: {
-		src: '/src/assets/divider.png',
+		src: divider,
 		width: '70%',
 		height: '90%',
 		alt: 'divider',
